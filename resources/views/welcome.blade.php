@@ -9,10 +9,6 @@
 
     @vite('resources/js/app.js')
 
-    <div id="message">
-
-    </div>
-
 </body>
 </html>
 
@@ -23,10 +19,6 @@
         window.Echo.channel('example-channel')
         .listen('testingEvent', (e) => {
             console.log(e);
-            let h1 = document.createElement('h1');
-            let mess = document.getElementById('message');
-            h1.innerText = e.message; 
-            mess.append(h1);
         });
 
     }, 200);
